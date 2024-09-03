@@ -29,3 +29,15 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    color: var(--textDim);
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+  
