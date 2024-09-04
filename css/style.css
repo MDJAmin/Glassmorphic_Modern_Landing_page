@@ -6,7 +6,7 @@
   --background: hsl(0, 0%, 7%);
   --primary: hsl(0, 100%, 65%);
   --primaryBg: hsla(155, 100%, 65%, 1%);
-  --primaryHi: hsla(0, 100%, 75%, 0.25);
+  --primaryHi: hsla(223, 81%, 46%, 0.25);
   --primaryFg: hsl(0, 100%, 85%);
   --secondary: hsl(0, 52%, 14%);
   --secondaryFg: hsl(0, 51%, 75%);
@@ -66,6 +66,7 @@ width: 100%;
     font-size: 1.3em;
     font-weight: bold;
     transition: all .5s;
+    cursor: grab;
   }
   .sitename:hover{
     color: var(--text);
@@ -120,11 +121,13 @@ width: 100%;
   
   .title > p:nth-child(1){
     align-self: flex-start;
+    padding-bottom: 80px;
   }
   
   .title > p:nth-child(2){
     color: var(--primary);
-    align-self: flex-end;
+    align-self: center;
+    position: absolute;
   }
   
   .title > p:nth-child(3){
@@ -133,6 +136,7 @@ width: 100%;
   
   .material-icons {
     display: none;
+    cursor: pointer;
     fill: var(--text);
   }
   
@@ -195,7 +199,9 @@ span {
   top: 12%;
   right: 20%;
 }
-
+.button.first > button{
+  color: var(--text);
+}
 .button.sec {
   bottom: 13%;
   right: 11%;
