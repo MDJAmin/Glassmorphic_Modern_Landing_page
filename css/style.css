@@ -4,14 +4,14 @@
   --text: hsl(0, 0%, 99%);
   --textDim: hsl(0, 0%, 60%);
   --background: hsl(0, 0%, 7%);
-  --primary: hsl(155, 100%, 65%);
+  --primary: hsl(0, 100%, 65%);
   --primaryBg: hsla(155, 100%, 65%, 1%);
-  --primaryHi: hsla(155, 100%, 75%, 25%);
-  --primaryFg: hsl(155, 100%, 85%);
-  --secondary: hsl(156, 51%, 14%);
-  --secondaryFg: hsl(156, 51%, 75%);
+  --primaryHi: hsla(0, 100%, 75%, 0.25);
+  --primaryFg: hsl(0, 100%, 85%);
+  --secondary: hsl(0, 52%, 14%);
+  --secondaryFg: hsl(0, 51%, 75%);
   --secondaryBg: hsla(156, 51%, 14%, 5%);
-  --secondaryHi: hsla(156, 51%, 30%, 50%);
+  --secondaryHi: hsla(0, 52%, 30%, 0.5);
   --accent: hsl(155, 100%, 94%);
   --accentBg: hsla(155, 100%, 94%, 1%);
   --accentHi: hsla(155, 100%, 100%, 25%);
@@ -40,14 +40,35 @@ nav {
     box-sizing: border-box;
     z-index: 9999;
   }
-  
+  .menu{
+    transition: all .5s;
+    position: relative;
+  }
+  .menu::after{
+    content: "";
+    position: absolute;
+   bottom: -3px;
+   left: 0;
+    width: 0;
+    height: 1px;
+    transition: all .5s;
+   background-color: white;
+  }
+  .menu:hover::after{
+width: 100%;
+  }
   .menu:hover {
     color: var(--text);
     cursor: pointer;
   }
   
   .sitename {
+    font-size: 1.3em;
     font-weight: bold;
+    transition: all .5s;
+  }
+  .sitename:hover{
+    color: var(--text);
   }
   
   .grid {
