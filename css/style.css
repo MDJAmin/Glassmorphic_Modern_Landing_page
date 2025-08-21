@@ -4,15 +4,15 @@
   --text: hsl(0, 0%, 99%);
   --textDim: hsl(0, 0%, 60%);
   --background: hsl(0, 0%, 7%);
-  --primary: hsl(0, 100%, 65%);
+  --primary: hsl(0, 82%, 56%);
   --primaryBg: hsla(155, 100%, 65%, 1%);
-  --primaryHi: hsla(223, 81%, 46%, 0.25);
-  --primaryHi2: hsl(223, 81%, 46%);
+  --primaryHi: #ec5e95;
+  --primaryHi2: #ec5e95;
   --primaryFg: hsl(0, 100%, 85%);
   --secondary: hsl(0, 52%, 14%);
   --secondaryFg: hsl(0, 51%, 75%);
   --secondaryBg: hsla(156, 51%, 14%, 5%);
-  --secondaryHi: hsla(0, 52%, 30%, 0.5);
+  --secondaryHi: hsla(0, 86%, 48%, 0.5);
   --accent: hsl(155, 100%, 94%);
   --accentBg: hsla(155, 100%, 94%, 1%);
   --accentHi: hsla(155, 100%, 100%, 25%);
@@ -121,18 +121,19 @@ nav {
 }
 
 .title > p:nth-child(1) {
+  color: var(--primaryHi2);
   align-self: flex-start;
   padding-bottom: 80px;
 }
 
 .title > p:nth-child(2) {
-  color: var(--primary);
   align-self: center;
   position: absolute;
 }
 
 .title > p:nth-child(3) {
-  color: var(--primaryHi2);
+  color: var(--primary);
+
   align-self: flex-end;
 }
 
@@ -159,9 +160,7 @@ nav {
 button {
   height: 50px;
   width: 160px;
-  clip-path: path(
-    "M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25"
-  );
+  clip-path: path("M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25");
   border: none;
   border-radius: 13px;
   background-color: var(--primaryBg);
